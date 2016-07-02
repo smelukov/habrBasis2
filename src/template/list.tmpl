@@ -1,0 +1,17 @@
+<b:style src="./list.css" ns="my"/>
+
+<div>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="my:buttons btn-group">
+                <button class="btn btn-success" event-click="add" disabled="{disabled}">добавить</button>
+                <button class="btn btn-danger" event-click="save" disabled="{disabled}">сохранить</button>
+            </div>
+        </div>
+    </div>
+    <div class="my:list">
+        <div class="alert alert-info" b:show="{loading}">загружается...</div>
+        <div class="alert alert-danger" b:show="{empty}">нет записей</div>
+        <div{childNodesElement}></div>
+    </div>
+</div>
